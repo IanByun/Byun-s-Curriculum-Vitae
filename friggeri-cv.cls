@@ -198,7 +198,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=verbose, maxnames=99, sorting=ydnt, backend=biber]{biblatex}
 
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
@@ -280,14 +280,16 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   }
   \par\vspace{0.3\baselineskip}
 }
-
-\DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
-  \ifblank{##3}{}{##3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
-}
+   
+%https://tex.stackexchange.com/questions/348783/error-illegal-parameter-number-in-definition-of-blxdefformatd-ifblank3
+%https://tex.stackexchange.com/questions/299036/biblatex-3-3-name-formatting/299084#299084
+%\DeclareNameFormat{author}{%
+%  \small\addfontfeature{Color=lightgray}%
+%  \ifblank{##3}{}{##3\space}#1%
+%  \ifthenelse{\value{listcount}<\value{liststop}}
+%    {\addcomma\space}
+%    {}%
+%}
 
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
@@ -309,3 +311,47 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Byun, Jung-Hyun Edit %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%https://tex.stackexchange.com/a/328286/169957
+%In addition to "above", my_name is embolded "and" displayed without abbreviation.
+\newcommand{\makeauthorbold}[1]{%
+  \DeclareNameFormat{author}{%
+    \small\addfontfeature{Color=lightgray}%
+    \ifthenelse{\value{listcount}=1}
+    {%
+      {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiven}}{\namepartfamily\addcomma\addspace \namepartgiveni}}
+      %
+    }{\ifnumless{\value{listcount}}{\value{liststop}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiven}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}
+        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiven\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
+      }
+    \ifthenelse{\value{listcount}<\value{liststop}}
+    {\addcomma\space}
+  }
+}
+
+%https://tex.stackexchange.com/questions/242194/friggeri-resume-template-problem-of-having-several-nested-items-inside-an-entry
+%------------
+\usepackage{enumitem}
+\renewenvironment{entrylist}{%
+  \begin{itemize}[leftmargin=1in]%[leftmargin=*,align=left,itemindent=-\dimexpr\labelwidth+\labelindent+\labelsep\relax]
+}{%
+  \end{itemize}
+}
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\renewcommand{\entry}[4]{%
+  %https://latex.org/forum/viewtopic.php?t=3348
+  \item[{\parbox[t]{0.2\linewidth}{#1}}]
+    \parbox[t]{1\linewidth}{
+      \textbf{#2}%
+      \hfill%
+      {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+      #4\vspace{\parsep}%
+    }
+  }
+%-------
