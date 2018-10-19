@@ -1,135 +1,117 @@
 %!TEX TS-program = xelatex
+% https://tex.stackexchange.com/questions/325278/xelatex-runs-slow-on-windows-machine
 \documentclass[]{friggeri-cv}
+\makeauthorbold{Byun}
 \addbibresource{bibliography.bib}
 
 \begin{document}
-\header{adrien}{friggeri}
-       {social network analyst}
-
+\header{Jung-Hyun }{Byun}
+       {computer scientist majoring in augmented reality}
 
 % In the aside, each new line forces a line break
 \begin{aside}
-  \section{about}
-    31 rue Smith
-    69002 Lyon
-    France
-    ~
-    \href{mailto:adrien@friggeri.net}{adrien@friggeri.net}
-    \href{http://friggeri.net}{http://friggeri.net}
-    \href{http://facebook.com/adrien}{fb://adrien}
+  \section{contact}
+    \href{mailto:junghyun.ian.byun@gmail.com}{junghyun.ian.byun\\@gmail.com}
   \section{languages}
-    bilingual french/english
-    spanish \& italian notions
+    Korean (native)
+    English (fluent)
   \section{programming}
-    {\color{red} $\varheartsuit$} JavaScript
-    (ES5, node.js)
-    Python, C, OCaml
-    CSS3 \& HTML5
+    C++ (skilled)
+    Python/CUDA/Matlab/\\Java (beginner)
+  \section{skills}
+    OpenCV, OpenGL, openFrameworks
 \end{aside}
 
-\section{interests}
+%\section{About}
 
-complex networks, social networks, community detection, community structure,
-overlapping communities, information diffusion, viral marketing, social
-inference, recommendation, data mining
+\section{Interests}
 
-\section{education}
+computer vision, computer graphics, machine learning and human-computer interaction\\
+augmented reality, projection mapping, point cloud processing and scene reconstruction
+
+\section{Education}
 
 \begin{entrylist}
   \entry
-    {since 2009}
+    {2015.9.1\\--2020.8.31}
     {Ph.D. {\normalfont candidate in Computer Science}}
-    {DNET/INRIA, LIP/ÉNS de Lyon}
-    {\emph{A Quantified Theory of Social Cohesion.}}
+    {Yonsei University, Korea}
+    {}
   \entry
-    {2007–2008}
-    {M.Sc. magna cum laude}
-    {IXXI, École Normale Supérieure de Lyon}
-    {Majoring in Computer Science\\
-    Specialization in Complex Systems}
-  \entry
-    {2006–2007}
-    {B.Sc. magna cum laude}
-    {École Normale Supérieure de Lyon}
-    {Majoring in Computer Science}
-  \entry
-    {2003–2006}
-    {Classes Préparatoires aux Grandes Écoles}
-    {Lycée Fénelon, Lycée Louis le Grand, Paris}
-    {Preparation for national competitive entrance exams to leading French ``grandes écoles'', specializing in mathematics and physics.}
-  \entry
-    {2003}
-    {French Baccalauréat S. with honors}
-    {Lycée Louis le Grand, Paris}
-    {Specialization in mathematics and physics}
+    {2011.3.1\\--2015.2.28}
+    {B.Sc. {\normalfont in Computer Science and Egineering}}
+    {Yonsei University, Korea}
+    {}
 \end{entrylist}
 
-\section{experience}
+\section{Projects}
 
 \begin{entrylist}
   \entry
-    {02–07 2009}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Visualization of complex networks.}}
+    {2018.09.01\\--2020.08.31} %
+    {Integration of Context-aware Pervasive AR Platform for Personal Assistant Implementation}
+    {National Research Foundation of Korea, 266K USD/year}
+    {Role: Principal Investigator \& Lead Researcher\\
+    \\
+    $\bullet$ Investigating applicability of deep learning-based spatial context-awareness.\\
+    $\bullet$ Investigating integration of  scene understanding technologies in an augmented reality environment.\\
+    $\bullet$ Investigating real-time dynamic projection mapping on a pan-tilt platform.
+    }
   \entry
-    {06–08 2008}
-    {ISCPIF/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Diffusion in the Blogosphere. Happy Flu.}}
+    {2018.04.30\\--2018.10.31}
+    {Development of hand motion recognition technology based on sensor fusion}
+    {Samsung Electronics Company, 48K USD/year}
+    {Role: Project Manager\\
+    
+    $\bullet$ Managed implementation of algorithms for identifying hand postures of workers using IMU sensor data.
+    }
   \entry
-    {06–08 2007}
-    {LIP6/CNRS, Paris}
-    {Research Internship.}
-    {\emph{Kernels in real world networks.}}
+    {2015.11.01\\--2018.10.31} 
+    {Pervasive AR interaction platform construction using a mobile projection technology}
+    {National Research Foundation of Korea, 264K USD/year}
+    {Role: Project Manager \& Lead Researcher\\
+    \\
+    $\bullet$ Designed a user-perspective rendering algorithm for correcting distortions of projection mapping caused by surface geometry.\\
+    $\bullet$ Designed  a visual servoing algorithm for accurately controlling pan-tilt servo motors based on rotation axis calibration.
+    }
   \entry
-    {07–08 2005}
-    {\href{http://www.kelkoo.com}{Kelkoo.com}}
-    {Summer job.}
-    {\emph{Creation of a keyword generator for Google Adwords.}}
+    {2015.08.01\\--2017.03.31}
+    {Development of filming and rendering technology based on multi-autonomous flight collaboration for large-scale performance and broadcasting}
+    {Korea Institute of Science and Technology, 26K USD/year}
+    {Role: Researcher \& Developer\\
+    \\
+    $\bullet$ Designed and implemented scale-adaptive visual object tracking algorithm based on SVM.\\
+    $\bullet$ Developed a Windows program for tracking multiple objects based on epipolar geometry.
+    }
   \entry
-    {07–08 2004}
-    {\href{http://www.monsieurprix.com}{MonsieurPrix.com}}
-    {Summer job.}
-    {\emph{Development of an e-commerce product indexation spider.}}
+    {2015.04.01\\--2017.12.31}
+    {Research of vision-based mobile object recognition technology for life logging}
+    {Korea Institute of Science and Technology, 44K USD/year}
+    {Role: Researcher \& Developer\\
+    \\
+    $\bullet$ Implemented keypoint extraction and descriptor matching algorithms on an Android platform.\\
+    $\bullet$ Developed Android applications for marker-less augmented reality and medicine recognition.
+    }
 \end{entrylist}
 
-\section{applications}
+\section{Publications}
 
-\begin{entrylist}
-  \entry
-    {2012}
-    {Who did I forget ?}
-    {\href{http://whodidiforget.com}{whodidiforget.com}}
-    {Guest list recommendation for Facebook events based on friends already attending the event.}
-  \entry
-    {2011}
-    {Fellows}
-    {\href{http://fellows-exp.com}{fellows-exp.com}}
-    {Automatic community detection among Facebook Friends in order to validate the \emph{cohesion} measure, creation of friend lists.}
-  \entry
-    {2008}
-    {Happy Flu}
-    {\href{http://happyflu.com}{happyflu.com}}
-    {Experiment aimed to measure viral spreading of content across the blogosphere.}
-\end{entrylist}
+\begin{refsection}
+  \nocite{*}
+  \printbibliography[
+    type=article, 
+    title=\textbf{Articles in peer-reviewed journals}, 
+    heading=subbibliography
+  ]
+\end{refsection}
 
-\section{publications}
-
-Put your publications here!
-
-%%% This piece of code has been commented by Karol Kozioł due to biblatex errors. 
-% 
-%\printbibsection{article}{article in peer-reviewed journal}
-%\begin{refsection}
-%  \nocite{*}
-%  \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-%\end{refsection}
-%\begin{refsection}
-%  \nocite{*}
-%  \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-%\end{refsection}
-%\printbibsection{misc}{other publications}
-%\printbibsection{report}{research reports}
+\begin{refsection}
+  \nocite{*}
+  \printbibliography[
+    type=inproceedings, 
+    title=\textbf{Proceedings at peer-reviewed conferences}, 
+    heading=subbibliography
+  ]
+\end{refsection}
 
 \end{document}
