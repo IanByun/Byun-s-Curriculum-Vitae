@@ -7,4 +7,4 @@ Add Biber to TexWorks
 https://tex.stackexchange.com/a/63310/169957
 
 Enjoy  
-[Example of my CV](cv.pdf)
+[Example of my CV](Jung-Hyun_Byun_CV.pdf)
