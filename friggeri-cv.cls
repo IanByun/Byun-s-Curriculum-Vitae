@@ -214,7 +214,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize\addfontfeature{Color=gray}\itshape%
     \usebibmacro{journal+issuetitle}%
     \setunit{\space}%
     \printfield{pages}%
@@ -234,7 +234,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}%
+    \footnotesize\addfontfeature{Color=gray}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
     \printfield{year}%
@@ -252,7 +252,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize\addfontfeature{Color=gray}\itshape%
     \printfield{booktitle}%
     \setunit*{\addcomma\space}%
     \printfield{note}%
@@ -272,7 +272,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par%
   \newblock%
   {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \footnotesize\addfontfeature{Color=gray}\itshape%
     \printfield{type}%
     \setunit{\space}%
     \printfield{number}%
@@ -352,7 +352,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \parbox[t]{1\linewidth}{
       \textbf{#2}%
       \hfill%
-      {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+      {\footnotesize\addfontfeature{Color=gray} #3}\\%
       #4\vspace{\parsep}%
     }
   }
