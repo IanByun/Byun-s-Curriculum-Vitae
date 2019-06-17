@@ -3,10 +3,12 @@
 \documentclass[]{friggeri-cv}
 \makeauthorbold{Byun}
 \addbibresource{bibliography.bib}
+%https://tex.stackexchange.com/questions/246524/remove-asterik-in-friggeri-template
+\defbibheading{subbibliography}[\refname]{\subsection{#1}}
 
 \begin{document}
 \header{Jung-Hyun }{Byun}
-       {Last updated: May 21, 2019}
+       {Last updated: June 17, 2019}
 
 % In the aside, each new line forces a line break
 \begin{aside}
@@ -33,12 +35,13 @@
 computer vision, computer graphics, machine learning and human-computer interaction\\
 augmented reality, projection mapping, point cloud processing and scene reconstruction
 
+\par\null\par\null\par
 \section{Education}
 
 \begin{entrylist}
   \entry
-    {2015.9.1\\--Current}
-    {Ph.D. {\normalfont course in Computer Science}}
+    {2015.9.1\\--2020.08.31}
+    {Ph.D. {\normalfont candidate in Computer Science}}
     {Yonsei University, Korea}
     {}
   \entry
@@ -48,13 +51,14 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     {}
 \end{entrylist}
 
+\par\null\par\null\par
 \section{Selected Publications}
 
 \begin{refsection}
   \nocite{*}
   \printbibliography[
     type=article, 
-    title=\textbf{Publications of peer-reviewed journal articles}, 
+    title=\textbf{Journal articles}, 
     heading=subbibliography
   ]
 \end{refsection}
@@ -63,12 +67,13 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \nocite{*}
   \printbibliography[
     type=inproceedings, 
-    title=\textbf{Proceedings of peer-reviewed conference papers}, 
+    title=\textbf{Conference proceedings}, 
     heading=subbibliography,
     keyword={selected}
   ]
 \end{refsection}
 
+\par\null\par\null\par
 \section{Awards}
 
 \begin{entrylist}
@@ -84,13 +89,14 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     {NAVER Corporation}
 \end{entrylist}
 
+\clearpage
 \section{Projects}
 
 \begin{entrylist}
   \entry
     {2018.09.01\\--2020.08.31} %
     {Integration of Context-aware Pervasive AR Platform for Personal Assistant Implementation}
-    {National Research Foundation (NRF), 266K USD/year}
+    {National Research Foundation of Korea (NRF)}
     {Role: Project Manager \& Lead Researcher\\
     \\
     $\bullet$ Research on applicability of deep learning-based spatial context-awareness in an augmented reality environment.\\
@@ -100,7 +106,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \entry
     {2018.04.30\\--2018.10.31}
     {Development of hand motion recognition technology based on sensor fusion}
-    {Samsung Electronics Company, 48K USD/year}
+    {Samsung Electronics Company (SEC)}
     {Role: Project Manager\\
     
     $\bullet$ Managed implementation of algorithms for identifying hand postures of workers using IMU sensor data.
@@ -108,7 +114,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \entry
     {2015.11.01\\--2018.10.31} 
     {Pervasive AR interaction platform construction using a mobile projection technology}
-    {National Research Foundation (NRF), 264K USD/year}
+    {National Research Foundation of Korea (NRF)}
     {Role: Project Manager \& Lead Researcher\\
     \\
     $\bullet$ Designed a user-perspective rendering algorithm for correcting distortions of projection mapping caused by surface geometry.\\
@@ -117,7 +123,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \entry
     {2015.08.01\\--2017.03.31}
     {Development of filming and rendering technology based on multi-autonomous flight collaboration for large-scale performance and broadcasting}
-    {Korea Institute of Science and Technology (KIST), 26K USD/year}
+    {Korea Institute of Science and Technology (KIST)}
     {Role: Researcher \& Developer\\
     \\
     $\bullet$ Designed and implemented scale-adaptive visual object tracking algorithm based on SVM.\\
@@ -126,7 +132,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \entry
     {2015.04.01\\--2017.12.31}
     {Research of vision-based mobile object recognition technology for life logging}
-    {Korea Institute of Science and Technology (KIST), 44K USD/year}
+    {Korea Institute of Science and Technology (KIST)}
     {Role: Researcher \& Developer\\
     \\
     $\bullet$ Implemented keypoint extraction and descriptor matching algorithms on an Android platform.\\
@@ -134,6 +140,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     }
 \end{entrylist}
 
+\clearpage
 \section{Other Publications}
 
 \begin{refsection}
