@@ -327,12 +327,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     {%
       {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiven}}{\namepartfamily\addcomma\addspace \namepartgiveni}}
       %
-    }{\ifnumless{\value{listcount}}{\value{liststop}}
-        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiven}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}
-        {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiven\addcomma\isdot}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni\addcomma\isdot}}%
-      }
-    \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
+    }
+    {  \ifnumless{\value{listcount}}{\value{liststop}}
+       {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\addcomma\addspace \mkbibbold{\namepartfamily\addcomma\addspace \namepartgiven}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}
+       {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\addcomma\addspace \mkbibbold{\namepartfamily\addcomma\addspace \namepartgiven}}{\addcomma\addspace \namepartfamily\addcomma\addspace \namepartgiveni}}%
+    }
   }
 }
 
