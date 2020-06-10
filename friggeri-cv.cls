@@ -35,7 +35,7 @@
   \colorlet{purple}{black}
   \colorlet{red}{black}
   \colorlet{blue}{black}
-  \colorlet{fillheader}{lightlightgray}
+  \colorlet{fillheader}{lightgray}
   \colorlet{header}{black}
 \else
   \colorlet{fillheader}{gray}
@@ -71,6 +71,7 @@ ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
 \newfontfamily\thinfont[Path=fonts/]{Lato-Light.ttf}
+\newfontfamily\italicfont[Path=fonts/]{texgyreheros-italic.otf}
 \newfontfamily\headingfont[Path=fonts/]{texgyreheros-bold.otf}
 
 \defaultfontfeatures{Mapping=tex-text}
@@ -103,7 +104,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{24pt}{32pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
+      {\bodyfont #1}{\headingfont  #2}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
