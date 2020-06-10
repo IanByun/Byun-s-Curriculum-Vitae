@@ -19,7 +19,9 @@
 
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{silver}{HTML}{808080}
+\definecolor{lightgray}{HTML}{D3D3D3}
+\definecolor{lightlightgray}{HTML}{DCDCDC}
 
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
@@ -27,14 +29,14 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 
-\ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+\ifdefined\cvprint
+  \colorlet{green}{black}
+  \colorlet{orange}{black}
+  \colorlet{purple}{black}
+  \colorlet{red}{black}
+  \colorlet{blue}{black}
+  \colorlet{fillheader}{lightlightgray}
+  \colorlet{header}{black}
 \else
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
@@ -98,9 +100,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
-      \fontsize{40pt}{72pt}\color{header}%
+      \fontsize{24pt}{32pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
     \node [anchor=north] at (name.south) {%
@@ -108,8 +110,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
       \thinfont #3%
     };
   \end{tikzpicture}
-  \vspace{2.5cm}
-  \vspace{-2\parskip}
+  \vspace{1.5cm}
+  \vspace{-3\parskip}
 }
 
 
@@ -128,7 +130,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
         orange\or%
         green\or%
         purple\else%
-        headercolor\fi%
+        black\fi%
     } #1#2#3%
   }%
   \stepcounter{colorCounter}%
@@ -186,7 +188,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.6}(1.5, 3.0)
   \begin{flushright}
   \obeycr
 }{%
@@ -220,7 +222,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \printfield{pages}%
     \newunit%
     \printlist{publisher}%
-    v
+    \setunit*{\addcomma\space}%
     \printfield{year}%
     \newunit%
   }
@@ -322,7 +324,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %In addition to "above", my_name is embolded "and" displayed without abbreviation.
 \newcommand{\makeauthorbold}[1]{%
   \DeclareNameFormat{author}{%
-    \small\addfontfeature{Color=lightgray}%
+    \small\addfontfeature{Color=silver}%
     \ifthenelse{\value{listcount}=1}
     {%
       {\expandafter\ifstrequal\expandafter{\namepartfamily}{#1}{\mkbibbold{\namepartfamily\addcomma\addspace \namepartgiven}}{\namepartfamily\addcomma\addspace \namepartgiveni}}

@@ -1,19 +1,24 @@
 %!TEX TS-program = xelatex
 % https://tex.stackexchange.com/questions/325278/xelatex-runs-slow-on-windows-machine
+\def\cvprint{This changes color presets.}
 \documentclass[]{friggeri-cv}
 \makeauthorbold{Byun}
 \addbibresource{bibliography.bib}
 %https://tex.stackexchange.com/questions/246524/remove-asterik-in-friggeri-template
 \defbibheading{subbibliography}[\refname]{\subsection{#1}}
 
+\usepackage{kotex}
+\setmainhangulfont{나눔바른고딕}
+
 \begin{document}
 \header{Jung-Hyun }{Byun}
-       {Last updated: December 6, 2019}
+       { 변정현, Contact:
+       \href{mailto:junghyun.byun@yonsei.ac.kr}{junghyun.byun@yonsei.ac.kr}}
 
 % In the aside, each new line forces a line break
 \begin{aside}
-  \section{contact}
-    \href{mailto:junghyun.byun@yonsei.ac.kr}{junghyun.byun\\@yonsei.ac.kr}
+  \section{currently at}
+    Ph.D. Candidate, Yonsei University, Seoul, Korea
 %     \href{https://github.com/IanByun}{[GitHub]}
 %     \href{https://scholar.google.co.kr/citations?user=JzneZIcAAAAJ}{[Scholar]}
 %     \href{https://orcid.org/0000-0002-1248-292X}{[ORCID]}
@@ -26,6 +31,8 @@
     Python/CUDA/\\Matlab/Java (user)
   \section{skills}
     OpenCV, OpenGL, openFrameworks
+  \section{last updated}
+    June 10, 2020
   \section{view online}
     \includegraphics[width=\textwidth]{data/cv_qr_code}
 \end{aside}
@@ -39,7 +46,7 @@
 computer vision, computer graphics, machine learning and human-computer interaction\\
 augmented reality, projection mapping, point cloud processing and scene reconstruction
 
-\par\null\par\null\par
+\par\null%\par\null\par
 %-----------------------------------------------------------------------------------------------------------------
 \section{Education}
 
@@ -47,16 +54,16 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \entry
     {2015.9.1\\--2020.08.31}
     {Ph.D. {\normalfont candidate in Computer Science}}
-    {Yonsei University, Korea}
-    {}
+    {Yonsei University, Seoul, Korea}
+    {Thesis: Projection Mapping and Augmented Reality for Pervasive AR \\Framework and Environment}
   \entry
     {2011.3.1\\--2015.2.28}
     {B.Sc. {\normalfont in Computer Science and Engineering}}
-    {Yonsei University, Korea}
+    {Yonsei University, Seoul, Korea}
     {}
 \end{entrylist}
 
-\par\null\par\null\par
+\par\null%\par\null\par
 %-----------------------------------------------------------------------------------------------------------------
 \section{Selected Publications}
 
@@ -80,31 +87,31 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   ]
 \end{refsection}
 
-\par\null\par\null\par
+\par\null%\par\null\par
 %-----------------------------------------------------------------------------------------------------------------
 \section{Awards}
 
 \begin{entrylist}
 \entry
-    {2018}
-    {Best Demo Award}
+    {2019}
+    {Merit Academic Paper Award (우수논문 장려상)}
     {}
-    {ACM International Conference on Multimedia (ACM MM)}
+    {Yonsei University \hangulfontspec{나눔고딕}(연세대학교)}
+\entry
+    {2019}
+    {Best Paper Presentation Award (우수 논문 발표상)}
+    {}
+    {Korea Multimedia Society \hangulfontspec{나눔고딕}(한국멀티미디어학회)}
 \entry
     {2018}
     {Ph.D. Fellowship Award}
     {}
-    {NAVER Corporation}
+    {NAVER Corporation \hangulfontspec{나눔고딕}(네이버 주식회사)}
 \entry
-    {2019}
-    {Best Paper Presentation Award}
+    {2018}
+    {Best Demo Award}
     {}
-    {Korea Multimedia Society}
-\entry
-    {2019}
-    {Merit Academic Paper Award}
-    {}
-    {Yonsei University}
+    {ACM International Conference on Multimedia (ACM MM)}
 \end{entrylist}
 
 %-----------------------------------------------------------------------------------------------------------------
@@ -113,9 +120,9 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
 \begin{entrylist}
 \entry
     {2019}
-    {Title: Projection Mapping and Augmented Reality for Pervasive AR \\Environment}
     {NAVER Tech Talk}
-    {NAVER Corporation}
+    {NAVER Corporation \hangulfontspec{나눔고딕}(네이버 주식회사)}
+    {Projection Mapping and Augmented Reality for Pervasive AR Environment}
 \end{entrylist}
 
 %-----------------------------------------------------------------------------------------------------------------
@@ -125,7 +132,7 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
   \nocite{*}
   \printbibliography[
     type=misc, 
-    title=\textbf{Domestic (Korea)}, 
+    title=\textbf{Domestic (Republic of Korea)}, 
     heading=subbibliography,
     keyword={patent}
   ]
@@ -137,8 +144,9 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
 \begin{entrylist}
   \entry
     {2018.09.01\\--2020.08.31} %
-    {Integration of Context-aware Pervasive AR Platform for Personal Assistant Implementation}
-    {National Research Foundation of Korea (NRF)}
+    {퍼스널 어시스턴트 구현을 위한 맥락인지 Pervasive AR 플랫폼 구축\\
+    Integration of Context-aware Pervasive AR Platform for Personal Assistant Implementation}
+    {National Research Foundation of Korea \hangulfontspec{나눔고딕}(한국연구재단)}
     {Role: Project Manager \& Lead Researcher\\
     \\
     $\bullet$ Research on applicability of deep learning-based spatial context-awareness in an augmented reality environment.\\
@@ -147,16 +155,18 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     }
   \entry
     {2018.04.30\\--2018.10.31}
-    {Development of hand motion recognition technology based on sensor fusion}
-    {Samsung Electronics Company (SEC)}
+    {센서 융합 기반 손 동작 인식 기술 개발\\
+    Development of hand motion recognition technology based on sensor fusion}
+    {Samsung Electronics Company \hangulfontspec{나눔고딕}(삼성전자)}
     {Role: Project Manager\\
     
     $\bullet$ Managed implementation of algorithms for identifying hand postures of workers using IMU sensor data.
     }
   \entry
     {2015.11.01\\--2018.10.31} 
-    {Pervasive AR interaction platform construction using a mobile projection technology}
-    {National Research Foundation of Korea (NRF)}
+    {이동형 프로젝션 기술을 이용한 Pervasive AR 인터랙션 플랫폼 구축\\
+    Pervasive AR interaction platform construction using a mobile projection technology}
+    {National Research Foundation of Korea \hangulfontspec{나눔고딕}(한국연구재단)}
     {Role: Project Manager \& Lead Researcher\\
     \\
     $\bullet$ Designed a user-perspective rendering algorithm for correcting distortions of projection mapping caused by surface geometry.\\
@@ -164,8 +174,9 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     }
   \entry
     {2015.08.01\\--2017.03.31}
-    {Development of filming and rendering technology based on multi-autonomous flight collaboration for large-scale performance and broadcasting}
-    {Korea Institute of Science and Technology (KIST)}
+    {대규모 공연 및 방송을 위한 다중 자율 비행체 협업 기반 첨단 촬영 및 렌더링 기술 개발\\
+    Development of filming and rendering technology based on multi-autonomous flight collaboration for large-scale performance and broadcasting}
+    {Korea Institute of Science and Technology \hangulfontspec{나눔고딕}(KIST, 한국과학기술연구원)}
     {Role: Researcher \& Developer\\
     \\
     $\bullet$ Designed and implemented scale-adaptive visual object tracking algorithm based on SVM.\\
@@ -173,8 +184,9 @@ augmented reality, projection mapping, point cloud processing and scene reconstr
     }
   \entry
     {2015.04.01\\--2017.12.31}
-    {Research of vision-based mobile object recognition technology for life logging}
-    {Korea Institute of Science and Technology (KIST)}
+    {라이프 로깅을 위한 영상 기반 모바일 객체 인식 연구 개발\\
+    Research of vision-based mobile object recognition technology for life logging}
+    {Korea Institute of Science and Technology \hangulfontspec{나눔고딕}(KIST, 한국과학기술연구원)}
     {Role: Researcher \& Developer\\
     \\
     $\bullet$ Implemented keypoint extraction and descriptor matching algorithms on an Android platform.\\
