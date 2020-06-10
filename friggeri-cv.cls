@@ -215,12 +215,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \newblock%
   {%
     \footnotesize\addfontfeature{Color=gray}\itshape%
-    \usebibmacro{journal+issuetitle}%
-    \setunit{\space}%
+    \printfield{journaltitle}%
+    \setunit*{\addcomma\space}%
     \printfield{pages}%
     \newunit%
     \printlist{publisher}%
-    \setunit*{\addcomma\space}%
+    v
     \printfield{year}%
     \newunit%
   }
