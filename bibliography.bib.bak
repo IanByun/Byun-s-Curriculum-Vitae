@@ -7,11 +7,12 @@
   year    = {2019},
 }
 
-@Article{byun2019prism,
-  author  = {Byun, Jung-Hyun and Ro, Hyocheol and Kim, Kyuri and Han, Tack-Don},
-  journal = {Under Review},
-  title   = {PRISM: Interactive Projection Display System for Pervasive Registration of Interface with Spatial Manipulation},
-  year    = {2020},
+@article{byun2019prism,
+  title = {PRISM: Interactive Projection Display System for Pervasive Registration of Interface with Spatial Manipulation},
+  author = {Byun, Jung-Hyun and Ro, Hyocheol and Kim, Kyuri and Han, Tack-Don},
+  journal={Under Review},
+  year={2019},
+  KEYWORDS = {}
 }
 
 @Misc{byun2018patent,
