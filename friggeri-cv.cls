@@ -314,7 +314,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+%\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=3cm,top=2cm,right=3cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -342,7 +343,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %------------
 \usepackage{enumitem}
 \renewenvironment{entrylist}{%
-  \begin{itemize}[leftmargin=1in]%[leftmargin=*,align=left,itemindent=-\dimexpr\labelwidth+\labelindent+\labelsep\relax]
+  \begin{itemize}[leftmargin=1.1in]%[leftmargin=*,align=left,itemindent=-\dimexpr\labelwidth+\labelindent+\labelsep\relax]
 }{%
   \end{itemize}
 }
